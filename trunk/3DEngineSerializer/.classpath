@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/agustin/src/jpct/1.23/jpct/lib/jpct/jpct.jar"/>
-	<classpathentry kind="lib" path="/home/agustin/src/commons-io-2.0.1/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="ext_java_libs/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="ext_java_libs/jpct.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
