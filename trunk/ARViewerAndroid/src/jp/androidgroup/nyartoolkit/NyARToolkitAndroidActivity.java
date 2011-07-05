@@ -304,8 +304,8 @@ public class NyARToolkitAndroidActivity extends Activity implements View.OnClick
 				R.raw.camera_para);
 		ArrayList<InputStream> patt = new ArrayList<InputStream>();
 		patt.add(getResources().openRawResource(R.raw.patthiro));
-		patt.add(getResources().openRawResource(R.raw.pattbeamer));
-		//patt.add(getResources().openRawResource(R.raw.pattkanji));
+		//patt.add(getResources().openRawResource(R.raw.pattbeamer));
+		patt.add(getResources().openRawResource(R.raw.pattgirl));
 		arToolkit = new ARToolkitDrawer(camePara, patt, mRenderer, mTranslucentBackground, isYuv420spPreviewFormat);
 		
 		
