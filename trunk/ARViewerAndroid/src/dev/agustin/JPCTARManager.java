@@ -385,38 +385,29 @@ public class JPCTARManager extends BaseRenderer implements
 			if (useRHfp) {
 				Log.d("JPCTARManager", "model is at " + model.getMasterObject().getTransformedCenter().toString());
 				//prevent the model from showing at 0,0,0 when the application starts and there are no coordinates from camera yet
-				/*
-				if (model.getMasterObject().getTransformedCenter().equals(SimpleVector.ORIGIN))
-				{
-					Log.d("drawModels", "setModelVisibility:FALSE");
-					model.setModelVisibility(false);
-					//blit an icon to alert the user
-					blitLightIcon();
-				}
-				else
-				{
-				*/
+//				if (model.getMasterObject().getTransformedCenter().equals(SimpleVector.ORIGIN))
+//				{
+//					Log.d("drawModels", "setModelVisibility:FALSE");
+//					model.setModelVisibility(false);
+//					//blit an icon to alert the user
+//					blitLightIcon();
+//				}
+//				else
+//				{
 					model.setModelVisibility(true);
 					// note the camera stays still and objects move in front of it
 					// (when tagged)
 					this.currentAnimFrame++;
 					//animates x fixed frames
-					//TOIMPROVE: do something dynamic here
-					float framesToAnimate = 15f;
-					float index = this.currentAnimFrame * (1f / framesToAnimate); 
+					//TODO: set the animation here instead of directly calling setTransMatFromCamera() which moves the object right to the new detected marker position without smooth transition 
+					//float framesToAnimate = 15f;
+					//float index = this.currentAnimFrame * (1f / framesToAnimate); 
 					
-					//if (index > 1) {
-						setTransMatFromCamera();
-						//Log.w("JPCT",Long.valueOf(SystemClock.uptimeMillis()).toString() + " Animation has reached last keyframe before new camera frame.");
-						/*
-					} else {
-						//Log.d("JPCT",Long.valueOf(SystemClock.uptimeMillis()).toString() + " Moving object to " + model.getMasterObject().getTransformedCenter().toString());
-						model.getMasterObject().animate(index);
-						model.translatedTo(model.getMasterObject().getTransformedCenter());
-					}
-					*/
+					setTransMatFromCamera();
+					model.translatedTo(model.getMasterObject().getTransformedCenter());
+					
 					model.drawFrame();
-				//}
+//				}
 			} 
 			if (patt[ar_code_index[i]] != -1) {
 				//Log.d("JPCTARManager", "onDrawFrame: " + i + ",model: " + ar_code_index[i]);
