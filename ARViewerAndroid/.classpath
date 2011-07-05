@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry kind="lib" path="/home/agustin/src/jpct-ae/1.23/jpct-ae/lib/jpct_ae.jar"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="ext_java_libs/jpct_ae.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
